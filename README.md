@@ -147,12 +147,18 @@ If any command is initilaized with sudo ,and proper changes haven't been made to
 
 Its better to make the following changes to `sudoers` file so as to increase the time limit and password versatility in any other terminal.
 
+To open sudoers file:
+Type `$ visudo` in a new terminal.
+
 ```
 Defaults        env_reset,timestamp_timeout=120
 Defaults        mail_badpass
 Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:$
 Defaults        !tty_tickets
 ```
+Since,tmux executes all the commands in the panes simultaneosly,it can give errors for the processes that must be executed sequentially.Under such case, use of command `sleep [time in seconds]` will be preferable as shown in controls window of the above config file.
+
+Moreover,a new session can also be executed separetely for planner and sensors modules of the above config file incase they have prerequsite commands like mentioned in controls module.
 
 ###For ease in navigation during the tmux session,
 
@@ -164,7 +170,6 @@ Write the following lines in this empty conf file and save:
 
 ```
 set-option -g mouse-select-pane on
-
 set -g mouse-resize-pane on
 set -g mouse-select-pane on
 set -g mouse-select-window on
@@ -177,7 +182,7 @@ Open a new terminal.
 
 `$ tmux new-session`
 
-`$ mux `project_name` `
+`$ mux project_name`
 Result:All windows with corresponding panes starts executing the commands.
 
 To kill all execution at once,
@@ -189,7 +194,7 @@ type in any pane of the the session as:
 To edit the config file of `project_name`:
 During the session,
 
-`$ tmux open `new_project` `
+`$ tmux open project_name`
 
 
 
