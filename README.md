@@ -32,6 +32,7 @@ Result:A green strip must appear at bottom
 $ mux new project_name
 
 Result:config file opens in default editor 
-##Writing the config file
+###Writing the config file
 
+//#tmux
 
