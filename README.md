@@ -2,15 +2,23 @@
 ###Executing commands sequentially in different panes and windows
 
 Open terminal
+
 $ sudo apt-get install tmux
+
 $ sudo apt-get install ruby
+
 $ sudo su
+
 $ gem install tmuxinator
+
 Exit from su
 
 The directory .tmuxinator contains the config file.
+
 $ export EDITOR='gedit'
-$ echo $EDITOR       
+
+$ echo $EDITOR
+
 Ignore if already included in ~/.bashrc
 
 ###To start new session
