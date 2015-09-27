@@ -34,5 +34,5 @@ $ mux new project_name
 Result:config file opens in default editor 
 ###Writing the config file
 
-//#tmux
+#######tmux
 
